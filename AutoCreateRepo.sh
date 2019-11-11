@@ -31,7 +31,7 @@ user="$1" # set your github username here;
 origin="https://github.com/${user}/${2}.git"
 first='{"name":"'
 last='"}'
-full="${first}${1}${last}"
+full="${first}${2}${last}"
 
 # TODO: Find a better way to join the strings and find better names.
 #

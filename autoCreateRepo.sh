@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 #
-# mygit.sh - creates a github repo;
+# autoCreateRepo.sh - creates a github repo;
 #
 # Site: https://github.com/hbenvenutti/AutoCreateRepo
 # Author: Huam Benvenutti
 # Maintence: Huam Benvenutti
 #
 # ------------------------------------------------------------------------ #
-# Creates a github repository and starts a git project in the current folder.
+# It creates a github repository and starts a git project in the current directory.
 #
 # Exemples:
 #
-# $ AutoCreateRepo username  repo_name
+# $ autoCreateRepo username  repo_name
 #
 # ------------------------------------------------------------------------ #
 # History:
@@ -27,7 +27,7 @@
 #
 # --------------------------VARIABLES------------------------------------------#
 
-user="$1" # set your github username here;
+user="$1"
 origin="https://github.com/${user}/${2}.git"
 first='{"name":"'
 last='"}'
@@ -49,6 +49,8 @@ full="${first}${2}${last}"
 #
 # -------------------------EXECUTION--------------------------------------------#
 curl -u "${user}" https://api.github.com/user/repos -d $full 
+# It uses github api to connect;
+
 echo "# $2" > README.md
 git init
 git add README.md

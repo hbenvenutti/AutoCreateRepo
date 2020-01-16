@@ -9,9 +9,9 @@
 # ------------------------------------------------------------------------ #
 # It creates a github repository and starts a git project in the current directory.
 #
-# Exemples:
+# Examples:
 #
-# $ autoCreateRepo username  repo_name
+# $ autoCreateRepo <username>  <repo_name>
 #
 # ------------------------------------------------------------------------ #
 # History:
